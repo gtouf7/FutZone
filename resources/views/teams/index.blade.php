@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('public/home')
 @section('content')
 <h2 class="display-3">
     Club List

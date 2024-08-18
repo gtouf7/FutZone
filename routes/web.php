@@ -6,8 +6,13 @@ use App\Models\Player;
 use App\Http\Controllers\TeamController; 
 use App\Http\Controllers\PlayerController; 
 
+//main routes
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/public/home', function () {
+    return view('public.home');
 });
 
 Route::get('/teams/index', function() {

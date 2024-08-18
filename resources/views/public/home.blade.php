@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
@@ -39,10 +39,9 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid mt-5">
+<div class="container-fluid mt-5">
         <div class="container">
             @yield('content')
         </div>
     </div>
 </body>
-</html>
