@@ -1,4 +1,4 @@
-@extends('layouts/admin')
+@extends('players.index')
 @section('content')
     <div class="row">
         <div class="col">
@@ -37,8 +37,8 @@
             <input type="number" class="form-control" name="jerseyNO" id="jerseyNO"  aria-describedby="jerseyNO">
           </div>
           <div class="mb-3">
-            <label for="team" class="form-label">Teams</label>
-            <select name="team" id="team">
+            <label for="teamID" class="form-label">Teams</label>
+            <select name="teamID" id="teamID">
                 @foreach ($teams as $team)
                     <option value="{{ $team -> id }}">{{ $team -> teamName }}</option>
                 @endforeach

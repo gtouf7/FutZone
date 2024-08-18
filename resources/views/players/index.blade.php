@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('public/home')
 @section('content')
 <div class="row">
     <div class="col">

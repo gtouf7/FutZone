@@ -25,7 +25,8 @@ class UpdatePlayerRequest extends FormRequest
             'playerFname' => 'required|string',
             'playerLname' => 'required|string',
             'position' => 'required|string',
-            'jerseyNO' => 'required|integer'
+            'jerseyNO' => 'required|integer',
+            'teamID' => 'required|integer'
         ];
     }
 }

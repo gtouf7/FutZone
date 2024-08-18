@@ -60,7 +60,7 @@ class PlayerController extends Controller
      */
     public function edit(Player $player)
     {
-        return view('players.edit', compact('player'));
+        return view('players.edit',compact('player'),['teams' => Team::all()]);
     }
 
     /**

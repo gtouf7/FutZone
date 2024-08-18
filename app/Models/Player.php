@@ -17,9 +17,10 @@ class Player extends Model
         'playerLname',
         'position',
         'jerseyNO',
+        'teamID'
     ];
 
     public function team(){
-        return $this -> belongsToOne(Team::class);
+        return $this -> belongsTo(Team::class);
     }
 }

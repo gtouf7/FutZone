@@ -1,4 +1,4 @@
-@extends('layouts/admin')
+@extends('public/home')
 @section('content')
 <div class="row">
     <div class="col">
