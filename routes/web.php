@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/public/teams', function() {
+    return view('public.teams', ['teams' => Team::all()]);
+});
+
 //Team
 Route::get(
     'teams/trash/{id}',
