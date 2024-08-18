@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Team;
+use App\Models\Player;
 use App\Http\Controllers\TeamController; 
 use App\Http\Controllers\PlayerController; 
 
@@ -9,8 +10,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/public/teams', function() {
-    return view('public.teams', ['teams' => Team::all()]);
+Route::get('/teams/index', function() {
+    return view('teams.index', ['teams' => Team::all()]);
+});
+Route::get('/players/index', function() {
+    return view('players.index', ['players' => Player::all()]);
 });
 
 //Team
