@@ -21,3 +21,5 @@ This project's purpose it for a user to be able to create their own teams and pl
         - Jersey Number
         - Team ID
 A one to many relationship is being implemented within the database.
+
+### 3. Screenshots
