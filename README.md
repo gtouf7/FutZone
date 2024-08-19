@@ -38,9 +38,11 @@ b. Players
 ![PlayerEdit](https://github.com/user-attachments/assets/531a14ec-2cc5-40e7-a47d-1a05e0dae8a9)
 ![PlayerAdd](https://github.com/user-attachments/assets/20c3e56c-4c21-4204-8c15-d920486aa6a7)
 
-
-
-
+c. User
+---------------------------
+![register](https://github.com/user-attachments/assets/488d5248-3696-4ba7-b1b0-43499d8ef587)
+![login](https://github.com/user-attachments/assets/fbbed181-c49b-4dc5-829e-a5bdd90c8b7a)
+![forgotPassword](https://github.com/user-attachments/assets/c8147508-7a30-4547-b24b-4ba52aeaec8b)
 
 ### 4. Issues
 The delete functionality for teams and players is being redirected to the players/teams.show view even though we have switched to redirect to the teams/players.index. Tried plenty of changes in routing names but nothing seems to be working. Players/Teams.trashed view is also not working.
