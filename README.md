@@ -20,8 +20,14 @@ This project's purpose it for a user to be able to create their own teams and pl
         - Position
         - Jersey Number
         - Team ID
+        
 A one to many relationship is being implemented within the database.
 
 ### 3. Screenshots
+
 ### 4. Issues
 The delete functionality for teams and players is being redirected to the players/teams.show view even though we have switched to redirect to the teams/players.index. Tried plenty of changes in routing names but nothing seems to be working. Players/Teams.trashed view is also not working.
+
+### 5. Thoughts
+Laravel seems like a useful framework when it comes to working with php. While working on the project, our thoughts are that there can be confusion with the way routing works and it can get complicated. 
+
