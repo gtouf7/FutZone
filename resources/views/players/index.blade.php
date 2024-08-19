@@ -7,6 +7,9 @@
         </h1>
     </div>
 </div>
+<div>
+    <a href="{{ route('players.create') }}">Add Player</a>
+</div>
 <div class="row">
     <div class="col">
         @foreach ($players as $player)
@@ -25,4 +28,4 @@
         @endforeach
     </div>
 </div>
-</@endsection>
+</d@endsection>

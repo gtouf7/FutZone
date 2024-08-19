@@ -1,4 +1,4 @@
-@extends('layouts/admin')
+@extends('public.home')
 @section('content')
     <div class="row">
         <div class="col">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="row">
-        <form action="{{ route(teams.update', $team -> id) }}" method="PUT">
+        <form action="{{ route('teams.update', $team -> id) }}" method="PUT">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -31,7 +31,7 @@
             <input type="text" class="form-control" name="teamColor" id="teamColor"  aria-describedby="teamColor">
           </div>
           <div class="mb-3">
-            <label for="yearFounded" class="form-label">JerseyNO</label>
+            <label for="yearFounded" class="form-label">Year Founded</label>
             <input type="number" class="form-control" name="yearFounded" id="yearFounded"  aria-describedby="yearFounded">
           </div>
             <button type="submit" class="btn btn-primary">Submit</button>

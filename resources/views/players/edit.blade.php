@@ -1,4 +1,4 @@
-@extends('layouts/admin')
+@extends('public/home')
 @section('content')
     <div class="row">
         <div class="col">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="row">
-        <form action="{{ route('teams.update', $team->id) }}" method="PUT">
+        <form action="{{ route('players.update', $player->id) }}" method="PUT">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

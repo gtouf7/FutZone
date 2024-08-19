@@ -1,4 +1,4 @@
-@extends('teams/index')
+@extends('public/home')
 @section('content')
     <div class="row">
         <div class="col">
@@ -33,7 +33,7 @@
             <input type="text" class="form-control" name="teamColor" id="teamColor"  aria-describedby="teamColor">
           </div>
           <div class="mb-3">
-            <label for="yearFounded" class="form-label">JerseyNO</label>
+            <label for="yearFounded" class="form-label">Year Founded</label>
             <input type="number" class="form-control" name="yearFounded" id="yearFounded"  aria-describedby="yearFounded">
           </div>
           </div>
