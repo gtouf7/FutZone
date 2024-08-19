@@ -4,4 +4,4 @@
 ### Features:
 - Teams CRUD
 - Players CRUD
-- User Authorization
+- User Authorization/Admin login
