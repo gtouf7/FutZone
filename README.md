@@ -7,7 +7,8 @@ This project's purpose it for a user to be able to create their own teams and pl
 ### 2. Details
  The admin wil be able to edit and delete the teams and/or players, the user will be able to view and insert a new team or player.
  There are two table taht are being stored in the database.
-     - #### Teams
+ 
+     -  Teams
          - id
          - Team Name
          - Country
