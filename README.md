@@ -2,11 +2,11 @@
 ## Built with Laravel
 ---------------------
 ### 1. Description
-This project's purpose it for a user to be able to create their own teams and players and have them stored in the desired team.
+This project's purpose to store info for teams and players for the purposes of a soccer management system.
 
 ### 2. Details
- The admin wil be able to edit and delete the teams and/or players, the user will be able to view and insert a new team or player.
- There are two table that are being stored in the database.
+ The admin wil be able to edit, add and delete the teams and/or players, the user will be able to view teams and players.
+ There are two tables that are being stored in the database.
  
      -  Teams
          - id
