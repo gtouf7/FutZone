@@ -3,6 +3,10 @@
 <h2 class="display-3">
     Club List
 </h2>
+<div>
+    <a href="{{ route('teams.create') }}">Add Team</a>
+</div>
+
 <div class="row">
     @foreach($teams as $team)
     <div class="col-md-4 mb-3">
@@ -13,7 +17,7 @@
                 <p class="card-text">Main color(s): {{ $team->teamColor }}</p>
                 <p class="card-text">Founded in: {{ $team->yearFounded }}</p>
                 <a href="{{ route('teams.edit', $team -> id ) }}" class="btn btn-primary">Edit</a>
-                <a href="{{ route('teams.trash', $team -> id )}}" class="btn btn-danger">Delete</a>
+                <a href="{{ route('teams.trash', $team -> id ) }}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
