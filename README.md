@@ -15,7 +15,7 @@ This project's purpose it for a user to be able to create their own teams and pl
          - Colors
          - Year Founded
          
-    - #### Players
+    - Players
         - id
         - Full Name
         - Position
