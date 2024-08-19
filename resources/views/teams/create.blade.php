@@ -1,4 +1,4 @@
-@extends('teams.index')
+@extends('teams/index')
 @section('content')
     <div class="row">
         <div class="col">
