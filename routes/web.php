@@ -1,59 +1,47 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Team;
-use App\Models\Player;
-use App\Http\Controllers\TeamController; 
-use App\Http\Controllers\PlayerController; 
+use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\TeamController;
 
-//main routes
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/public/home', function () {
-    return view('public.home');
+
+// Routes that require authentication
+Route::middleware('auth')->group(function () {
+    Route::resource('players', PlayerController::class);
+    Route::resource('teams', TeamController::class);
+
+    // Additional protected routes
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
 
-Route::get('/teams/index', function() {
-    return view('teams.index', ['teams' => Team::all()]);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/players/index', function() {
-    return view('players.index', ['players' => Player::all()]);
-});
 
-//Team
-Route::get(
-    'teams/trash/{id}',
-    [TeamController::class, 'trash']
-)->name('teams.trash');
-
-Route::get(
-    'teams/trashed/',
-    [TeamController::class, 'trashed']
-)->name('teams.trashed');
-
-Route::get(
-    'teams/restore/{id}',
-    [TeamController::class, 'trash']
-)->name('teams.restore');
-
-Route::resource('teams', TeamController::class);
-
-//Player
-Route::get(
-    'players/trash/{id}',
-    [PlayerController::class, 'trash']
-)->name('players.trash');
-
-Route::get(
-    'players/trashed/',
-    [PlayerController::class, 'trashed']
-)->name('players.trashed');
-
-Route::get(
-    'players/restore/{id}',
-    [PlayerController::class, 'restore']
-)->name('players.restore');
-
-Route::resource('players', PlayerController::class);
+require __DIR__.'/auth.php';

@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Session;
 
 class TeamController extends Controller
 {
+    /*Authentication*/
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the Teams
      */
@@ -41,6 +47,10 @@ class TeamController extends Controller
         return redirect() -> route('teams.index');
     }
 
+    public function edit(Team $team)
+    {
+        return view('teams.edit', compact('team'));
+    }
     /**
      * Display the specified team
      */

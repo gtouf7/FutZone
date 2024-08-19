@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePlayerRequest;
 use App\Http\Requests\UpdatePlayerRequest;
 use App\Models\Player;
+use App\Models\Team;
+
+use Illuminate\Support\Facades\Session;
+
 
 class PlayerController extends Controller
 {
+    /*Authentication*/
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -76,7 +86,7 @@ class PlayerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Player $player)
+    public function destroy($id)
     {
         $player = Player::withTrashed() -> where('id', $id) -> first();
         $player -> forceDelete();
@@ -98,4 +108,5 @@ class PlayerController extends Controller
         Session::flash('success', 'Player restored successfully');
         return redirect() -> route('players.index');
     }
+    
 }

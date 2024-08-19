@@ -7,7 +7,7 @@
     </div>
 
     <div class="row">
-        <form action="{{ route(teams.update', $team -> id) }}" method="PUT">
+        <form action="{{ route('teams.update', $team->id) }}" method="PUT">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
