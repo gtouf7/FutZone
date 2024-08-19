@@ -25,6 +25,7 @@ This project's purpose it for a user to be able to create their own teams and pl
 A one to many relationship is being implemented within the database.
 
 ### 3. Screenshots
+![TeamList](https://github.com/user-attachments/assets/905efe00-5382-419e-8afb-5acadc73f461)
 
 ### 4. Issues
 The delete functionality for teams and players is being redirected to the players/teams.show view even though we have switched to redirect to the teams/players.index. Tried plenty of changes in routing names but nothing seems to be working. Players/Teams.trashed view is also not working.
